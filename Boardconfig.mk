@@ -61,6 +61,7 @@ $(foreach p, $(BOARD_PARTITION_LIST), $(eval TARGET_COPY_OUT_$(p) := $(call to-l
 BOARD_ROOT_EXTRA_FOLDERS := cache data_mirror efs keydata keyrefuge metadata omr prism spu # efs is only partition that it will need, but for now let's ship all of them
 
 # Recovery
+BOARD_HAS_DOWNLOAD_MODE := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_NO_RECOVERY := false
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.mt6765
